@@ -39,7 +39,7 @@ public class Item {
 
     public static String getPhoneLabel(Resources resources, int type, Cursor cursor, boolean localizedLabels) {
         if (localizedLabels) {
-            if(CommonDataKinds.Phone != null && resources!=null) {
+            if(resources!=null) {
                 CharSequence localizedLabel = CommonDataKinds.Phone.getTypeLabel(resources, type, "");
                 return localizedLabel.toString().toLowerCase();
             }else{
@@ -75,7 +75,7 @@ public class Item {
 
     public static String getEmailLabel(Resources resources, int type, Cursor cursor, boolean localizedLabels) {
         if (localizedLabels) {
-            if(CommonDataKinds.Email != null && resources!= null) {
+            if(resources!= null) {
                 CharSequence localizedLabel = CommonDataKinds.Email.getTypeLabel(resources, type, "");
                 return localizedLabel.toString().toLowerCase();
             }else{
